@@ -4,8 +4,7 @@
     <p align="center">
     <img src="large_plain_pita.png"
          alt="Content vs Collab"
-         width="600"
-         height="450">
+         >
     </p>
 </figure>
 
@@ -25,7 +24,7 @@ There are several types of bread ordered, baked, and sold each day, but for the 
 
 Using daily data on store front transactions from January 2021 to March 2023, I was able to run a time series model to predict daily bread sales. I compared my sales predictions with the store front's bread orders over that same time frame and found that my predictions reduced the daily average order error by 25 and 33 packages of pita as compared with current orders on the train and test sets, respectively.
 
-My 2023 sales forecast can be found in ['data/future_forecast.csv'](http://localhost:8888/edit/data/future_forecast.csv).
+My 2023 sales forecast can be found in ['data/future_forecast.csv'](https://github.com/jnahra/capstone-project/blob/main/data/future_forecast.csv).
 
 # Data Understanding
 
