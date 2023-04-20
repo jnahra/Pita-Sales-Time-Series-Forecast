@@ -2,7 +2,7 @@
 
 <figure>
     <p align="center">
-    <img src="large_plain_pita.png"
+    <img src="illustrations/large_plain_pita.png"
          alt="Content vs Collab"
          >
     </p>
