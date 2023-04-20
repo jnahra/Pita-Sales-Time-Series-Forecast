@@ -4,8 +4,7 @@
     <p align="center">
     <img src="large_plain_pita.png"
          alt="Content vs Collab"
-         width="600"
-         height="450">
+         >
     </p>
 </figure>
 
@@ -19,13 +18,13 @@ The business has now passed onto the sons, my dad and his cousins, and is contin
 
 The large majority of the business is baking pita bread that is then distributed to grocery stores. However, we also sell pita bread out of the store front, both to retail and wholesale customers. The store manager places bread orders five times per week for fresh bread to be baked and sold at the store the next day (or two). In its current state without using data, orders are more feel-driven.
 
-The impetus behind the project is to see if we can use data to better match orders to sales, thereby reducing the amount of bread that must be discounted as day old bread or discarded while at the same time ordering enough such that all who want delicious fresh pita bread are able to buy it.
+The impetus behind the project is to see if we can use data to better match orders to sales, thereby reducing the amount of bread that must be discounted as day-old bread or discarded while at the same time ordering enough such that all who want delicious fresh pita bread are able to buy it.
 
 There are several types of bread ordered, baked, and sold each day, but for the purposes of this project I focused only on one bread type: large plain pita bread.
 
-Using daily data on store front transactions from January 2021 to March 2023, I was able to run a time series model to predict daily bread sales. I compared my sales predictions with the store front's bread orders over that same time frame and found that my predictions reduced the daily average order error by 25 and 33 packages of pita as compared with current orders on the train and test sets, respectively.
+Using daily data on store front transactions from January 2021 to March 2023, I ran a time series model to predict daily bread sales. I compared my sales predictions with the store front's bread orders over that same time frame and found that my predictions reduced the daily average order error by 25 and 33 packages of pita as compared with current orders on the train and test sets, respectively.
 
-My 2023 sales forecast can be found in ['data/future_forecast.csv'](http://localhost:8888/edit/data/future_forecast.csv).
+My 2023 sales forecast can be found in ['data/future_forecast.csv'](https://github.com/jnahra/capstone-project/blob/main/data/future_forecast.csv).
 
 # Data Understanding
 
@@ -41,7 +40,7 @@ For a baseline comparison, I utilized daily data on the store front's bread orde
 
 For my more complex time series model with additional regressors, I added variables for Cleveland Guardians day home games and Cleveland weather features.
 
-Aladdin's Baking Company is only a short walk from Progressive Field, the home of Cleveland's MLB franchise, so I wanted to see if pita sales were affected on days where the Guardians had a home game during the day time (defined as a game starting before 7 pm). It serves to reason that there may be some effect when there is greater foot traffic downtown (at least for sandwiches), though it could also dissuade would-be non-game-going customers from making the trip due to increased traffic. I utilized data from Baseball Reference to put together the Guardians home schedule from 2021-2023 (including playoffs), filtered for day games, and used game attendance as the variable. More fans, more traffic.
+Aladdin's Baking Company is only a short walk from Progressive Field, the home of Cleveland's MLB franchise, so I wanted to see if pita sales were affected on days when the Guardians had a home game during the day time (defined as a game starting before 7 pm). It serves to reason that there may be some effect when there is greater foot traffic downtown (at least for sandwiches), though it could also dissuade would-be non-game-going customers from making the trip due to increased traffic. I utilized data from Baseball Reference to put together the Guardians home schedule from 2021-2023 (including playoffs), filtered for day games, and used game attendance as the variable. More fans, more foot traffic is the theory.
 
 I also wanted to see if Cleveland weather could provide a more accurate, granular sales forecast outside of general annual seasonality. I gathered daily weather data from the National Oceanic and Atmospheric Administration for Cleveland Hopkins Airport, which is about 15 minutes away from the bakery. I was able to get features such as precipitation and snowfall in inches as well as maximum temperature for each day.
 
@@ -55,7 +54,7 @@ I ran two models each for retail sales and wholesale sales. The first model incl
 
 The time series model required two years of training data for annual seasonality purposes, so my train set was January 2021-January 2023 and my test set was January 2023-March 2023. The small test size represents a limitation in my model evaluation.
 
-Ultimately, the first model without regressors performed the best for both retail and wholesale sales. There may have been very slight improvement adding the regressors, but I deemed the additional complexity of the model not worth the minimal improvement. A simpler model that does not require daily weather inputs is also more feasible for real-world model deployment. I can simply give the store manager my complete 2023 forecast, which he can put into action without any additional ongoing work required.
+Ultimately, the first model without regressors performed the best for both retail and wholesale sales. There may have been a very slight improvement adding the regressors, but I deemed the additional complexity of the model not worth the minimal improvement. A simpler model that does not require daily weather inputs is also more feasible for real-world model deployment. I can simply give the store manager my complete 2023 forecast, which he can put into action without any additional ongoing work required.
 
 After selecting my model, I re-trained the model with all the data (train and test set) for retail and wholesale sales. I then replaced any negative predictions with zero before adding retail and wholesale sales together for my final forecast of total daily pita bread sales for transactions equal to or below 54 packages of pita. The store manager can add in large orders as they become known.
 
@@ -67,7 +66,7 @@ This may be overly generous, as it does not appear that the storefront always or
 
 Indeed, one data limitation is that I don't know how many/which sales are known ahead of time, which would be useful in determining what I need to model and in comparing my model to current orders. But we can only go off what we know.
 
-A comparison between my model and current orders on the test set showed my model represented a substantial improvement. My model's test RMSE was 42 packages of pita versus 75 packages of pita for current orders.
+A comparison between my model and current orders on the test set showed my model represented a substantial improvement. My model was off on average by 42 packages of pita daily versus 75 packages of pita for current orders.
 
 # Recommendations & Future Insights
 
@@ -77,3 +76,4 @@ This model is ready to go and can help right now, but what can be done in the fu
 
 I am proud to be able to help the business my grandfather started over 50 years ago using tools I learned a few months ago. Hopefully the first project of many!
 
+Thanks for reading!
