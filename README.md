@@ -76,3 +76,4 @@ This model is ready to go and can help right now, but what can be done in the fu
 
 I am proud to be able to help the business my grandfather started over 50 years ago using tools I learned a few months ago. Hopefully the first project of many!
 
+Thanks for reading!
