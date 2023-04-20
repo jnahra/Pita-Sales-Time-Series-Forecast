@@ -66,7 +66,7 @@ This may be overly generous, as it does not appear that the storefront always or
 
 Indeed, one data limitation is that I don't know how many/which sales are known ahead of time, which would be useful in determining what I need to model and in comparing my model to current orders. But we can only go off what we know.
 
-A comparison between my model and current orders on the test set showed my model represented a substantial improvement. My model's test RMSE was 42 packages of pita versus 75 packages of pita for current orders.
+A comparison between my model and current orders on the test set showed my model represented a substantial improvement. My model was off on average by 42 packages of pita daily versus 75 packages of pita for current orders.
 
 # Recommendations & Future Insights
 
