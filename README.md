@@ -26,6 +26,8 @@ Using daily data on store front transactions from January 2021 to March 2023, I 
 
 My 2023 sales forecast can be found in ['data/future_forecast.csv'](https://github.com/jnahra/capstone-project/blob/main/data/future_forecast.csv).
 
+My full analysis can be found in the ['final_notebook'](https://github.com/jnahra/capstone-project/blob/main/final_notebook.ipynb).
+
 # Data Understanding
 
 As mentioned above, I used daily data on store front transactions from January 2021 to March 2023. The data contained characteristics of each individual customer purchase: date, item, quantity, price, etc.
