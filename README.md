@@ -38,6 +38,22 @@ Retail represents regular foot traffic. In the case of large plain pita, retail 
 
 Wholesale represents some of our wholesale customers who walk into the store front to buy bread. Generally, customers wanting more than 3 trays of bread (18 packages per tray, so 54 packages of pita) need to order ahead of time. Thus, I assumed in my model that any sale over 54 packages of pita would be known ahead of time. Most of these customers are wholesale customers, but there were a few retail customers who bought a large amount of bread as well.
 
+<figure>
+    <p align="center">
+    <img src="illustrations/daily_retail_sales.png"
+         alt="Content vs Collab"
+         >
+    </p>
+</figure>
+
+<figure>
+    <p align="center">
+    <img src="illustrations/daily_ws_sales.png"
+         alt="Content vs Collab"
+         >
+    </p>
+</figure>
+
 For a baseline comparison, I utilized daily data on the store front's bread orders from January 2021 to March 2023. This data contained order characteristics such as date, customer ID, bread type, quantity, sale cost, etc.
 
 For my more complex time series model with additional regressors, I added variables for Cleveland Guardians day home games and Cleveland weather features.
@@ -56,9 +72,41 @@ I ran two models each for retail sales and wholesale sales. The first model incl
 
 The time series model required two years of training data for annual seasonality purposes, so my train set was January 2021-January 2023 and my test set was January 2023-March 2023. The small test size represents a limitation in my model evaluation.
 
+<figure>
+    <p align="center">
+    <img src="illustrations/retail_sales_vs_predictions_test.png"
+         alt="Content vs Collab"
+         >
+    </p>
+</figure>
+
+<figure>
+    <p align="center">
+    <img src="illustrations/ws_sales_vs_predictions_test.png"
+         alt="Content vs Collab"
+         >
+    </p>
+</figure>
+
 Ultimately, the first model without regressors performed the best for both retail and wholesale sales. There may have been a very slight improvement adding the regressors, but I deemed the additional complexity of the model not worth the minimal improvement. A simpler model that does not require daily weather inputs is also more feasible for real-world model deployment. I can simply give the store manager my complete 2023 forecast, which he can put into action without any additional ongoing work required.
 
 After selecting my model, I re-trained the model with all the data (train and test set) for retail and wholesale sales. I then replaced any negative predictions with zero before adding retail and wholesale sales together for my final forecast of total daily pita bread sales for transactions equal to or below 54 packages of pita. The store manager can add in large orders as they become known.
+
+<figure>
+    <p align="center">
+    <img src="illustrations/retail_sales_forecast.png"
+         alt="Content vs Collab"
+         >
+    </p>
+</figure>
+
+<figure>
+    <p align="center">
+    <img src="illustrations/ws_sales_forecast.png"
+         alt="Content vs Collab"
+         >
+    </p>
+</figure>
 
 # Evaluation
 
@@ -69,6 +117,22 @@ This may be overly generous, as it does not appear that the storefront always or
 Indeed, one data limitation is that I don't know how many/which sales are known ahead of time, which would be useful in determining what I need to model and in comparing my model to current orders. But we can only go off what we know.
 
 A comparison between my model and current orders on the test set showed my model represented a substantial improvement. My model was off on average by 42 packages of pita daily versus 75 packages of pita for current orders.
+
+<figure>
+    <p align="center">
+    <img src="illustrations/total_sales_vs_orders.png"
+         alt="Content vs Collab"
+         >
+    </p>
+</figure>
+
+<figure>
+    <p align="center">
+    <img src="illustrations/total_sales_vs_predicted_sales.png"
+         alt="Content vs Collab"
+         >
+    </p>
+</figure>
 
 # Recommendations & Future Insights
 
