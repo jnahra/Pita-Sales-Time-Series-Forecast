@@ -28,7 +28,7 @@ My 2023 sales forecast can be found in ['data/future_forecast.csv'](https://gith
 
 My full analysis can be found in the ['final_notebook'](https://github.com/jnahra/capstone-project/blob/main/final_notebook.ipynb).
 
-A low-resolution video presentation of this project can be watched ['here'](https://github.com/jnahra/capstone-project/blob/main/video_presentation_480p.mov). Higher-resolution presentation slides can be viewed in ['presentation.pdf'](https://github.com/jnahra/capstone-project/blob/main/presentation.pdf).
+A low-resolution video presentation of this project can be watched [here](https://github.com/jnahra/capstone-project/blob/main/video_presentation_480p.mov). Higher-resolution presentation slides can be viewed in ['presentation.pdf'](https://github.com/jnahra/capstone-project/blob/main/presentation.pdf).
 
 # Data Understanding
 
