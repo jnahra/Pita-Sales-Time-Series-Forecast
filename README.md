@@ -40,7 +40,7 @@ Wholesale represents some of our wholesale customers who walk into the store fro
 
 <figure>
     <p align="center">
-    <img src="illustrations/daily_retail_sales.png"
+    <img src="illustrations/daily_retail_sales.jpg"
          alt="Content vs Collab"
          >
     </p>
@@ -48,7 +48,7 @@ Wholesale represents some of our wholesale customers who walk into the store fro
 
 <figure>
     <p align="center">
-    <img src="illustrations/daily_ws_sales.png"
+    <img src="illustrations/daily_ws_sales.jpg"
          alt="Content vs Collab"
          >
     </p>
@@ -74,7 +74,7 @@ The time series model required two years of training data for annual seasonality
 
 <figure>
     <p align="center">
-    <img src="illustrations/retail_sales_vs_predictions_test.png"
+    <img src="illustrations/retail_sales_vs_predictions_test.jpg"
          alt="Content vs Collab"
          >
     </p>
@@ -82,7 +82,7 @@ The time series model required two years of training data for annual seasonality
 
 <figure>
     <p align="center">
-    <img src="illustrations/ws_sales_vs_predictions_test.png"
+    <img src="illustrations/ws_sales_vs_predictions_test.jpg"
          alt="Content vs Collab"
          >
     </p>
@@ -94,7 +94,7 @@ After selecting my model, I re-trained the model with all the data (train and te
 
 <figure>
     <p align="center">
-    <img src="illustrations/retail_sales_forecast.png"
+    <img src="illustrations/retail_sales_forecast.jpg"
          alt="Content vs Collab"
          >
     </p>
@@ -102,7 +102,7 @@ After selecting my model, I re-trained the model with all the data (train and te
 
 <figure>
     <p align="center">
-    <img src="illustrations/ws_sales_forecast.png"
+    <img src="illustrations/ws_sales_forecast.jpg"
          alt="Content vs Collab"
          >
     </p>
@@ -120,7 +120,7 @@ A comparison between my model and current orders on the test set showed my model
 
 <figure>
     <p align="center">
-    <img src="illustrations/total_sales_vs_orders.png"
+    <img src="illustrations/total_sales_vs_orders.jpg"
          alt="Content vs Collab"
          >
     </p>
@@ -128,7 +128,7 @@ A comparison between my model and current orders on the test set showed my model
 
 <figure>
     <p align="center">
-    <img src="illustrations/total_sales_vs_predicted_sales.png"
+    <img src="illustrations/total_sales_vs_predicted_sales.jpg"
          alt="Content vs Collab"
          >
     </p>
